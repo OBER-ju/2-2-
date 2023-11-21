@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내가 좋아하는 음식</title>
+
+</head>
+<body>
+    <p>내가 좋아하는 음식</p>
+
+    <select id="mySelect" onchange="myFunction()">
+        <option value="짜장면">짜장면</option>
+        <option value="짬뽕">짬뽕</option>
+        <option value="탕수육">탕수육</option>
+        <option value="볶음밥">볶음밥</option>
+    </select>
+
+    <p>내가 좋아하는 음식이름과 그림이 나타납니다.</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    
+    <script>
+    function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    var y = document.getElementById("demo1");
+    document.getElementById("demo").innerHTML = "내가 좋아하는 음식은: " + x;
+    if(x=='짜장면'){
+        y.innerHTML="<img src='img/짜장면.jpg'>"
+    }
+    else if(x=='짬뽕'){
+        y.innerHTML="<img src='img/짬뽕.jpg'>"
+    }
+    else if(x=='탕수육'){
+        y.innerHTML="<img src='img/탕수육.jpg'>"
+    }
+    else if(x=='볶음밥'){
+        y.innerHTML="<img src='img/볶음밥.jpg'>"
+    }
+}
+
+    </script>
+</body>
+</html>
