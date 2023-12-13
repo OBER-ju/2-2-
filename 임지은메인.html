@@ -6,12 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인페이지</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0px;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+        }
 
+        #container {
+            text-align: center;
+            position: absolute; 
+            z-index: 1; 
+            color: white;
+            font-size: 80px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .video-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="con"></div>
-    <div class="vd"></div>
-    <video src=""></video>
+    <div class="container">
+        <div class="video-wrap">
+            <video src="video/ocean.mp4" muted autoplay loop width="100%" style="width: 100%;">
+            </video>
+        </div>
+        <header>
+            <div id="na">
+                <p>SEAPROTECTOR</p>
+            </div>
+            <div id="ca">
+                <p>Sign in</p>
+                <p>Sign up</p>
+                <p></p>
+            </div>
+        </header>
+        <footer>
+            <div>            
+                <p>전라북도 전주시 완산구 주영로 818, OBER빌딩 _ 대표이사 임지은 _ 사업자번호 000-00-00000 _ 대표번호 010-2939-1508</p>
+                <p>COPYRIGHT ⓒ 2023 BY OBERJU CO LTD. ALL RIGHT RESERVED </p>
+            </div>
+        </footer>
+        <div id="container">
+            <p style="font-family: ;">You can change it by your one action</p>
+        </div>
 </body>
 </html>
